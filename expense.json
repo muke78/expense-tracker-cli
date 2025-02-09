@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "date": "2025-02-09",
+    "description": "Keyboard",
+    "amount": 5000
+  },
+  {
+    "id": 2,
+    "date": "2025-02-09",
+    "description": "Mouse",
+    "amount": 350
+  },
+  {
+    "id": 3,
+    "date": "2025-02-09",
+    "description": "Earphones",
+    "amount": 5400
+  },
+  {
+    "id": 5,
+    "date": "2025-02-09",
+    "description": "POCO-F5",
+    "amount": 7543
+  },
+  {
+    "id": 6,
+    "date": "2025-02-09",
+    "description": "POCO-F6",
+    "amount": 9643
+  },
+  {
+    "id": 8,
+    "date": "2025-02-09",
+    "description": "Monitor",
+    "amount": 2466
+  },
+  {
+    "id": 9,
+    "date": "2025-02-09",
+    "description": "Hub de puertos",
+    "amount": 750
+  },
+  {
+    "id": 10,
+    "date": "2024-08-07",
+    "description": "Luces led",
+    "amount": 367
+  }
+]
