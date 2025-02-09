@@ -46,5 +46,29 @@
     "date": "2024-08-07",
     "description": "Luces led",
     "amount": 367
+  },
+  {
+    "id": 9,
+    "date": "2024-08-23",
+    "description": "Regulador",
+    "amount": 4509
+  },
+  {
+    "id": 10,
+    "date": "2024-08-11",
+    "description": "Plantita",
+    "amount": 85
+  },
+  {
+    "id": 11,
+    "date": "2024-08-25",
+    "description": "Ventilador",
+    "amount": 932
+  },
+  {
+    "id": 12,
+    "date": "2024-01-10",
+    "description": "Puntas para desarmador",
+    "amount": 238
   }
 ]

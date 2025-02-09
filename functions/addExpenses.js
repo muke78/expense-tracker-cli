@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import { loadChalk } from '../middleware/loadChalk.js';
 import { loadExpenses } from '../middleware/loadExpenses.js';
 import { saveExpenses } from '../middleware/saveExpenses.js';
+import { isValidDate } from '../middleware/validateDate.js';
 
 // Función para agregar un gasto
 export const addExpense = async () => {
@@ -24,7 +25,7 @@ export const addExpense = async () => {
           const numericAmount = Number(input);
           return !isNaN(numericAmount) && numericAmount >= 0
             ? true
-            : 'El monto debe ser un número positivo.';
+            : 'El numero no debe contener letras y debe ser positivo';
         },
       },
       {
@@ -45,9 +46,9 @@ export const addExpense = async () => {
           name: 'date',
           message: '📅 Ingrese la fecha (YYYY-MM-DD):',
           validate: (input) =>
-            /\d{4}-\d{2}-\d{2}/.test(input)
+            isValidDate(input)
               ? true
-              : 'Formato inválido. Usa YYYY-MM-DD.',
+              : 'Fecha inválida. Usa el formato YYYY-MM-DD y asegúrate de que sea una fecha válida.',
         },
       ]);
       date = dateAnswer.date;

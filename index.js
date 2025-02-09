@@ -75,5 +75,13 @@ program
   .description('Ve un total de todos los montos que se encunetran registrados')
   .action(summaryExpenses);
 
+// Comando para ver el total de montos por mes
+// program
+//   .command('summary-month')
+//   .description(
+//     'Ve un total de todos los montos que se encunetran registrados por mes'
+//   )
+//   .action(summaryExpenses);
+
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);

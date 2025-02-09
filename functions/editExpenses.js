@@ -2,6 +2,7 @@ import inquirer from 'inquirer';
 import { loadChalk } from '../middleware/loadChalk.js';
 import { loadExpenses } from '../middleware/loadExpenses.js';
 import { saveExpenses } from '../middleware/saveExpenses.js';
+import { isValidDate } from '../middleware/validateDate.js';
 
 // Funcion para editar un gasto
 export const editExpense = async () => {
@@ -68,9 +69,9 @@ export const editExpense = async () => {
           name: 'date',
           message: '📅 Ingrese la nueva fecha (YYYY-MM-DD):',
           validate: (input) =>
-            /\d{4}-\d{2}-\d{2}/.test(input)
+            isValidDate(input)
               ? true
-              : 'Formato inválido. Usa YYYY-MM-DD.',
+              : 'Fecha inválida. Usa el formato YYYY-MM-DD y asegúrate de que sea una fecha válida.',
         },
       ]);
       date = dateAnswer.date;
