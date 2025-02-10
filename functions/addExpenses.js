@@ -6,6 +6,7 @@ import { isValidDate } from '../middleware/validateDate.js';
 
 // Función para agregar un gasto
 export const addExpense = async () => {
+  const expenses = loadExpenses();
   const chalk = await loadChalk();
 
   try {
@@ -54,7 +55,6 @@ export const addExpense = async () => {
       date = dateAnswer.date;
     }
 
-    const expenses = loadExpenses();
     const newExpense = {
       id: expenses.length + 1,
       date,

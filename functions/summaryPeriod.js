@@ -5,7 +5,10 @@ import inquirer from 'inquirer';
 export const summaryPeriodExpenses = async () => {
   const chalk = await loadChalk();
   const expenses = loadExpenses();
-
+  if (expenses.length === 0) {
+    console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
+    return;
+  }
   try {
     const answers = await inquirer.prompt([
       {
@@ -30,7 +33,9 @@ export const summaryPeriodExpenses = async () => {
 
     const { month, total } = answers.id;
 
-    const date = new Date(`${month}-01`);
+    const [year, monthNumber] = month.split('-');
+    const date = new Date(year, monthNumber - 1);
+
     const monthName = date.toLocaleString('default', { month: 'long' });
 
     const formattedTotal = total.toLocaleString('en-US', {

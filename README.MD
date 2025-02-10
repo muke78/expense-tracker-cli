@@ -20,7 +20,7 @@ Application should run from the command line and should have the following featu
 - Users can delete an expense.
 - Users can view all expenses.
 - Users can view a summary of all expenses.
-    - Users can view a summary of expenses for a specific month (of current year).
+- Users can view a summary of expenses for a specific month (of current year).
 
 Here are some additional features that you can add to the application:
 - s

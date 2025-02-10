@@ -9,6 +9,11 @@ export const editExpense = async () => {
   const chalk = await loadChalk();
   const expenses = loadExpenses();
 
+  if (expenses.length === 0) {
+    console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
+    return;
+  }
+
   try {
     const answers = await inquirer.prompt([
       {

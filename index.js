@@ -1,12 +1,23 @@
 import { Command } from 'commander';
-import { listExpenses, addExpense, editExpense, deleteExpense, summaryExpenses, summaryPeriodExpenses} from './functions/index.js';
+import {
+  listExpenses,
+  addExpense,
+  editExpense,
+  deleteExpense,
+  summaryExpenses,
+  summaryPeriodExpenses,
+  exportCSV,
+} from './functions/index.js';
 
 const program = new Command();
 
 // Configuración del programa
 program
   .name('expense-tracker-cli')
-  .description('CLI para gestionar gastos')
+  .description(
+    ` CLI para control dee gastos    
+    `
+  )
   .version('1.0.0');
 
 // Comando para listar gastos
@@ -78,6 +89,12 @@ program
     'Ve un total de todos los montos que se encuentran registrados por mes'
   )
   .action(summaryPeriodExpenses);
+
+// Comando para exportar a csv
+program
+  .command('export')
+  .description('Exporta a csv los datos guardados')
+  .action(exportCSV);
 
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);
