@@ -70,5 +70,23 @@
     "date": "2024-01-10",
     "description": "Puntas para desarmador",
     "amount": 238
+  },
+  {
+    "id": 13,
+    "date": "2023-10-08",
+    "description": "Samsung A54",
+    "amount": 9542.68
+  },
+  {
+    "id": 14,
+    "date": "2023-10-20",
+    "description": "Chicle",
+    "amount": 1
+  },
+  {
+    "id": 15,
+    "date": "2025-02-10",
+    "description": "Carro",
+    "amount": 456432
   }
 ]

@@ -1,9 +1,5 @@
 import { Command } from 'commander';
-import { listExpenses } from './functions/listExpenses.js';
-import { addExpense } from './functions/addExpenses.js';
-import { editExpense } from './functions/editExpenses.js';
-import { deleteExpense } from './functions/deleteExpenses.js';
-import { summaryExpenses } from './functions/summary.js';
+import { listExpenses, addExpense, editExpense, deleteExpense, summaryExpenses, summaryPeriodExpenses} from './functions/index.js';
 
 const program = new Command();
 
@@ -72,16 +68,16 @@ program
 // Comando para ver el total de montos
 program
   .command('summary')
-  .description('Ve un total de todos los montos que se encunetran registrados')
+  .description('Ve un total de todos los montos que se encuentran registrados')
   .action(summaryExpenses);
 
 // Comando para ver el total de montos por mes
-// program
-//   .command('summary-month')
-//   .description(
-//     'Ve un total de todos los montos que se encunetran registrados por mes'
-//   )
-//   .action(summaryExpenses);
+program
+  .command('summary-m')
+  .description(
+    'Ve un total de todos los montos que se encuentran registrados por mes'
+  )
+  .action(summaryPeriodExpenses);
 
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);
