@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
-import { loadChalk } from '../middleware/loadChalk.js';
-import { loadExpenses } from '../middleware/loadExpenses.js';
-import { saveExpenses } from '../middleware/saveExpenses.js';
+import { loadChalk } from '../../middleware/loadChalk.js';
+import { loadExpenses } from '../../middleware/loadExpenses.js';
+import { saveExpenses } from '../../middleware/saveExpenses.js';
 
 export const deleteExpense = async () => {
   const chalk = await loadChalk();

@@ -7,8 +7,12 @@ import {
   summaryExpenses,
   summaryPeriodExpenses,
   exportCSV,
+  exportObject,
+  addCategories,
+  listCategories,
+  editCategory,
+  deleteCategory,
 } from './functions/index.js';
-import { exportObject } from './functions/exportCSVToObject.js';
 
 const program = new Command();
 
@@ -16,7 +20,7 @@ const program = new Command();
 program
   .name('expense-tracker-cli')
   .description(
-    ` CLI para control dee gastos    
+    ` CLI para control de gastos    
     `
   )
   .version('1.0.0');
@@ -102,6 +106,30 @@ program
   .command('import')
   .description('Exporta a data los datos desde un csv')
   .action(exportObject);
+
+// Comando para agregar una categoria
+program
+  .command('add-c')
+  .description('Agrega una categoria para un producto o gasto')
+  .action(addCategories);
+
+// Comando para listar las categorias
+program
+  .command('list-c')
+  .description('Lista todas las categorias')
+  .action(listCategories);
+
+// Comando para editar las categorias
+program
+  .command('edit-c')
+  .description('Edita la categoria de manera interactiva')
+  .action(editCategory);
+
+// Comando para eliminar las categorias
+program
+  .command('delete-c')
+  .description('Elimina la categoria de manera interactiva')
+  .action(deleteCategory);
 
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);

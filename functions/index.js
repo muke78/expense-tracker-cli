@@ -1,9 +1,12 @@
-export * from './addExpenses.js';
-export * from './deleteExpenses.js';
-export * from './editExpenses.js';
-export * from './listExpenses.js';
+export * from './expenses/addExpenses.js';
+export * from './expenses/deleteExpenses.js';
+export * from './expenses/editExpenses.js';
+export * from './expenses/listExpenses.js';
 export * from './summary.js';
 export * from './summaryPeriod.js';
 export * from './exportObjectToCSV.js';
-
-
+export * from './exportCSVToObject.js';
+export * from './category/addCategories.js';
+export * from './category/listCategories.js';
+export * from './category/editCategories.js';
+export * from './category/deleteCategory.js';

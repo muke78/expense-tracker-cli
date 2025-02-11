@@ -1,8 +1,8 @@
 import inquirer from 'inquirer';
-import { loadChalk } from '../middleware/loadChalk.js';
-import { loadExpenses } from '../middleware/loadExpenses.js';
-import { saveExpenses } from '../middleware/saveExpenses.js';
-import { isValidDate } from '../middleware/validateDate.js';
+import { loadChalk } from '../../middleware/loadChalk.js';
+import { loadExpenses } from '../../middleware/loadExpenses.js';
+import { saveExpenses } from '../../middleware/saveExpenses.js';
+import { isValidDate } from '../../middleware/validateDate.js';
 
 // Función para agregar un gasto
 export const addExpense = async () => {

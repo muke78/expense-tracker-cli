@@ -1,5 +1,5 @@
-import { loadChalk } from '../middleware/loadChalk.js';
-import { loadExpenses } from '../middleware/loadExpenses.js';
+import { loadChalk } from '../../middleware/loadChalk.js';
+import { loadExpenses } from '../../middleware/loadExpenses.js';
 
 // Función para mostrar la lista de gastos
 export const listExpenses = async () => {
