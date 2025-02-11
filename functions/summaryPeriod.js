@@ -22,7 +22,7 @@ export const summaryPeriodExpenses = async () => {
             const month = exp.date.slice(0, 7);
             monthlyTotals[month] = (monthlyTotals[month] || 0) + exp.amount;
           });
-
+          
           return Object.entries(monthlyTotals).map(([month, total]) => ({
             name: month,
             value: { month, total },

@@ -8,6 +8,7 @@ import {
   summaryPeriodExpenses,
   exportCSV,
 } from './functions/index.js';
+import { exportObject } from './functions/exportCSVToObject.js';
 
 const program = new Command();
 
@@ -95,6 +96,12 @@ program
   .command('export')
   .description('Exporta a csv los datos guardados')
   .action(exportCSV);
+
+// Comando para cargar csv a data
+program
+  .command('import')
+  .description('Exporta a data los datos desde un csv')
+  .action(exportObject);
 
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);

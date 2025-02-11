@@ -29,6 +29,6 @@ export const exportCSV = async () => {
 
     console.log(chalk.green('✅ CSV exportado con exito'));
   } catch (error) {
-    console.error(chalk.red('❌ Error al exportar el csv:'), error.message);
+    console.error(chalk.red('❌ Error al exportar los datos al csv:'), error.message);
   }
 };
