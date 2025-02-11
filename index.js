@@ -12,6 +12,7 @@ import {
   listCategories,
   editCategory,
   deleteCategory,
+  filterCategory,
 } from './functions/index.js';
 
 const program = new Command();
@@ -130,6 +131,12 @@ program
   .command('delete-c')
   .description('Elimina la categoria de manera interactiva')
   .action(deleteCategory);
+
+// Comando para eliminar las categorias
+program
+  .command('filter-c')
+  .description('Filtra los gastos que hay por categoria')
+  .action(filterCategory);
 
 // Parsear los argumentos de la línea de comandos
 program.parse(process.argv);

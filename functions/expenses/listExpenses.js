@@ -16,6 +16,7 @@ export const listExpenses = async () => {
     expenses.map((expense) => ({
       ID: `#${expense.id}`,
       Fecha: expense.date,
+      Categoria: expense.category,
       Descripción: expense.description,
       Monto: Intl.NumberFormat('en-US', {
         style: 'currency',

@@ -52,5 +52,6 @@ export const deleteExpense = async () => {
     console.log(`📅 Fecha: ${expenseToDelete.date}`);
   } catch (error) {
     console.error(chalk.red('❌ Error al eliminar el gasto:'), error.message);
+    return;
   }
 };

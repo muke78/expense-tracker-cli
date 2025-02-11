@@ -10,3 +10,4 @@ export * from './category/addCategories.js';
 export * from './category/listCategories.js';
 export * from './category/editCategories.js';
 export * from './category/deleteCategory.js';
+export * from './category/filterCategory.js';

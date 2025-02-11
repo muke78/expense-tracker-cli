@@ -28,5 +28,6 @@ export const summaryExpenses = async () => {
       chalk.red('❌ Error al calcular el total de los gastos:'),
       error.message
     );
+    return;
   }
 };

@@ -1,12 +1,14 @@
 import inquirer from 'inquirer';
 import { loadChalk } from '../../middleware/loadChalk.js';
 import { loadExpenses } from '../../middleware/loadExpenses.js';
+import { loadCategories } from '../../middleware/loadCategories.js';
 import { saveExpenses } from '../../middleware/saveExpenses.js';
 import { isValidDate } from '../../middleware/validateDate.js';
 
 // Función para agregar un gasto
 export const addExpense = async () => {
   const expenses = loadExpenses();
+  const categories = loadCategories();
   const chalk = await loadChalk();
 
   try {
@@ -35,6 +37,15 @@ export const addExpense = async () => {
         message: '📅 ¿Quieres usar la fecha de hoy?',
         default: true,
       },
+      {
+        type: 'list',
+        name: 'id',
+        message: '✏️ Elija la categoria a donde quiera incluirlo:',
+        choices: categories.map((cat) => ({
+          name: cat.category,
+          value: cat.id,
+        })),
+      },
     ]);
 
     let date;
@@ -55,11 +66,14 @@ export const addExpense = async () => {
       date = dateAnswer.date;
     }
 
+    const categoryToAdd = categories.find((cat) => cat.id === answers.id);
+
     const newExpense = {
       id: expenses.length + 1,
       date,
       description: answers.description,
       amount: Number(answers.amount),
+      category: categoryToAdd.category,
     };
 
     expenses.push(newExpense);
@@ -69,7 +83,9 @@ export const addExpense = async () => {
     console.log(`📌 Descripción: ${newExpense.description}`);
     console.log(`💰 Monto: $${newExpense.amount}`);
     console.log(`📅 Fecha: ${newExpense.date}`);
+    console.log(`🔡 Categoria: ${newExpense.category}`);
   } catch (error) {
-    console.log(chalk.red('❌ Error al registrar el gasto:'), error.message);
+    console.error(chalk.red('❌ Error al registrar el gasto:'), error.message);
+    return;
   }
 };

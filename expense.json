@@ -1,74 +1,51 @@
 [
   {
     "id": 1,
-    "date": "2025-02-10",
-    "description": "Picafresa",
-    "amount": 1.5
-  },
-  {
-    "id": 2,
-    "date": "2025-01-23",
-    "description": "Tenis",
-    "amount": 2570
+    "date": "2025-02-11",
+    "description": "Laptop",
+    "amount": 22352,
+    "category": "Tecnologia"
   },
   {
     "id": 3,
-    "date": "2025-03-23",
-    "description": "Zapatos",
-    "amount": 2672
+    "date": "2025-02-11",
+    "description": "Crema corporal",
+    "amount": 54,
+    "category": "Salud personal"
   },
   {
     "id": 4,
-    "date": "2025-02-10",
-    "description": "Carro",
-    "amount": 124312412
+    "date": "2025-02-11",
+    "description": "Lentes",
+    "amount": 3456,
+    "category": "Cuidado Personal"
+  },
+  {
+    "id": 4,
+    "date": "2025-02-11",
+    "description": "Mouse",
+    "amount": 564,
+    "category": "Tecnologia"
   },
   {
     "id": 5,
-    "date": "2025-01-23",
-    "description": "Torta",
-    "amount": 35
+    "date": "2024-08-23",
+    "description": "Regulador",
+    "amount": 2134,
+    "category": "Tecnologia"
   },
   {
     "id": 6,
-    "date": "2025-02-15",
-    "description": "Café",
-    "amount": 50
+    "date": "2023-10-15",
+    "description": "Celular",
+    "amount": 9524,
+    "category": "Tecnologia"
   },
   {
     "id": 7,
-    "date": "2025-03-01",
-    "description": "Laptop",
-    "amount": 18450
-  },
-  {
-    "id": 8,
-    "date": "2025-02-20",
-    "description": "Mouse",
-    "amount": 670
-  },
-  {
-    "id": 9,
-    "date": "2025-01-30",
-    "description": "Teclado",
-    "amount": 1280
-  },
-  {
-    "id": 10,
-    "date": "2025-03-05",
-    "description": "Monitor",
-    "amount": 5499
-  },
-  {
-    "id": 11,
     "date": "2025-02-11",
-    "description": "Libreta",
-    "amount": 120
-  },
-  {
-    "id": 12,
-    "date": "2025-02-11",
-    "description": "Pack-lapiz",
-    "amount": 210
+    "description": "Audifonos",
+    "amount": 422,
+    "category": "Tecnologia"
   }
 ]

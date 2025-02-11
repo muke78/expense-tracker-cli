@@ -24,12 +24,25 @@ export const addCategories = async () => {
       category: answers.description,
     };
 
+    const categoryExist = categories.some(
+      (cat) => cat.category.toLowerCase() === newCategory.category.toLowerCase()
+    );
+
+    if (categoryExist) {
+      console.log(chalk.yellow('⚠️ La categoria ya existe. Intente con otra.'));
+      return addCategories();
+    }
+
     categories.push(newCategory);
     saveCategories(categories);
 
     console.log(chalk.green('\n✅ Categoria agregada correctamente:'));
     console.log(`📌 Categoria: ${newCategory.category}`);
   } catch (error) {
-    console.log(chalk.red('❌ Error al registrar la categoria'), error.message);
+    console.error(
+      chalk.red('❌ Error al registrar la categoria'),
+      error.message
+    );
+    return;
   }
 };

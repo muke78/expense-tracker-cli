@@ -70,5 +70,6 @@ export const exportObject = async () => {
       chalk.red('❌ Error al leer el CSV y subirlo:'),
       error.message
     );
+    return;
   }
 };

@@ -45,6 +45,7 @@ export const editCategory = async () => {
     console.log(chalk.green('\n✅ Se editó correctamente:'));
     console.log(`📌 Categoria: ${categoriesToEdit.category}`);
   } catch (error) {
-    console.log(chalk.red('❌ Error al editar la categoria:'), error.message);
+    console.error(chalk.red('❌ Error al editar la categoria:'), error.message);
+    return;
   }
 };

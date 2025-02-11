@@ -53,5 +53,6 @@ export const deleteCategory = async () => {
       chalk.red('❌ Error al eliminar la categoria:'),
       error.message
     );
+    return;
   }
 };
