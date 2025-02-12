@@ -4,13 +4,11 @@ import { loadCategories } from '../../middleware/loadCategories.js';
 import { loadChalk } from '../../middleware/loadChalk.js';
 
 export const filterCategory = async () => {
-  try {
-    const [chalk, expenses, categories] = await Promise.all([
-      loadChalk(),
-      loadExpenses(),
-      loadCategories(),
-    ]);
+  const chalk = await loadChalk();
+  const expenses = loadExpenses();
+  const categories = loadCategories();
 
+  try {
     if (expenses.length === 0 || categories.length === 0) {
       console.log(chalk.yellow('⚠️ No hay gastos registrados o categorías.'));
       return;

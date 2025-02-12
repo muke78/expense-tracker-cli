@@ -7,6 +7,10 @@ Build a simple expense tracker application to manage your finances. The applicat
 - [Project link](#project-link)
 - [Requirements](#requirements)
 - [Implementation](#implementation)
+- [Commands](#commands)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contact](#contact)
 
 ## Project link
 
@@ -90,6 +94,12 @@ Commands:
   summary-m       Ve un total de todos los montos que se encuentran registrados por mes
   export          Exporta a csv los datos guardados
   import          Exporta a data los datos desde un csv
+  limit           Establecer un limite de presupuesto a un mes en especifico
+  add-c           Agrega una categoria para un producto o gasto
+  list-c          Lista todas las categorias
+  edit-c          Edita la categoria de manera interactiva
+  delete-c        Elimina la categoria de manera interactiva
+  filter-c        Filtra los gastos que hay por categoria
   help [command]  display help for command
 ```
 

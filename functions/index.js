@@ -6,6 +6,7 @@ export * from './summary.js';
 export * from './summaryPeriod.js';
 export * from './exportObjectToCSV.js';
 export * from './exportCSVToObject.js';
+export * from './budgetLimit.js';
 export * from './category/addCategories.js';
 export * from './category/listCategories.js';
 export * from './category/editCategories.js';

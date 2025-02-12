@@ -11,12 +11,11 @@ export const editExpense = async () => {
   const expenses = loadExpenses();
   const categories = loadCategories();
 
-  if (expenses.length === 0) {
-    console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
-    return;
-  }
-
   try {
+    if (expenses.length === 0) {
+      console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
+      return;
+    }
     const answers = await inquirer.prompt([
       {
         type: 'list',

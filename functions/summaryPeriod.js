@@ -5,11 +5,12 @@ import inquirer from 'inquirer';
 export const summaryPeriodExpenses = async () => {
   const chalk = await loadChalk();
   const expenses = loadExpenses();
-  if (expenses.length === 0) {
-    console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
-    return;
-  }
+
   try {
+    if (expenses.length === 0) {
+      console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
+      return;
+    }
     const answers = await inquirer.prompt([
       {
         type: 'list',

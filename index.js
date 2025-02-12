@@ -13,6 +13,7 @@ import {
   editCategory,
   deleteCategory,
   filterCategory,
+  budgetLimitPerMonth
 } from './functions/index.js';
 
 const program = new Command();
@@ -39,6 +40,7 @@ const expenseCommands = [
   { command: 'summary-m', description: 'Ve un total de todos los montos que se encuentran registrados por mes', action: summaryPeriodExpenses },
   { command: 'export', description: 'Exporta a csv los datos guardados', action: exportCSV },
   { command: 'import', description: 'Exporta a data los datos desde un csv', action: exportObject },
+  { command: 'limit', description: 'Establecer un limite de presupuesto a un mes en especifico', action: budgetLimitPerMonth },
 ];
 
 // Comandos relacionados con categorías

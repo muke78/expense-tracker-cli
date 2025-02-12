@@ -7,12 +7,12 @@ export const deleteExpense = async () => {
   const chalk = await loadChalk();
   let expenses = loadExpenses();
 
-  if (expenses.length === 0) {
-    console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
-    return;
-  }
-
   try {
+    if (expenses.length === 0) {
+      console.log(chalk.yellow('⚠️ No hay gastos registrados.'));
+      return;
+    }
+
     const answers = await inquirer.prompt([
       {
         type: 'list',

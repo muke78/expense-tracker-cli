@@ -7,12 +7,11 @@ export const deleteCategory = async () => {
   const chalk = await loadChalk();
   let categories = loadCategories();
 
-  if (categories.length === 0) {
-    console.log(chalk.yellow('⚠️ No hay categorias registradas.'));
-    return;
-  }
-
   try {
+    if (categories.length === 0) {
+      console.log(chalk.yellow('⚠️ No hay categorias registradas.'));
+      return;
+    }
     const answers = await inquirer.prompt([
       {
         type: 'list',
